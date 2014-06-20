@@ -5,14 +5,17 @@ import javax.swing.UIManager;
 
 public class CalcularBinomioControle  {
 
+	private IBinomioEntidade e;
+	
 	public CalcularBinomioControle(IBinomioEntidade e) {
-		
+		this.e = e;
 	}
 
 
 	public int calcular(int n, int k) {
-		// TODO Auto-generated method stub
-		return 15;
+		e.setN(n);
+		e.setK(k);
+		return e.getCoeficiente();
 	}
 	
 	
@@ -22,7 +25,8 @@ public class CalcularBinomioControle  {
 			public void run() {
 				try {
 					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-					new CalcularBinomioControle();
+					IBinomioEntidade e = new BinomioEntidade();
+					CalcularBinomioControle controler = new CalcularBinomioControle(e);
 				} catch(Exception e){
 					e.printStackTrace();
 				}

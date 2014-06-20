@@ -8,7 +8,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @SuiteClasses({
 	BinomioEntidadeTest.class,
-	CalcularBinomioControleTest.class
+	CalcularBinomioControleTest.class,
+	FatorialTest.class
 })
 
 public class AllTests {}
